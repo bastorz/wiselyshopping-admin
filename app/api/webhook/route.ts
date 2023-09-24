@@ -40,7 +40,6 @@ export async function POST(req: Request) {
     const order = await prismadb.order.update({
       where: {
         id: session?.metadata?.orderId,
-        
       },
       data: {
         isPaid: true,
